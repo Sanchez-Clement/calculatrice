@@ -6,7 +6,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
+
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
@@ -16,16 +16,74 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+    <main id="calculatrice" class ="container">
+      <div class="row">
+        <section class="col-12" id="affichage">
+          <p id="total"></p>
+        </section>
+<section class="col-3">
+  <p id="chiffre1" onclick="calculate('1')">1</p>
+</section>
+<section class="col-3">
+  <p id="chiffre2" onclick="calculate('2')">2</p>
+</section>
+<section class="col-3">
+  <p id="chiffre3" onclick="calculate('3')">3</p>
+</section>
+<section class="col-3">
+  <p id="plus" onclick="calculate('+')">+</p>
+</section>
+<section class="col-3">
+  <p id="chiffre4" onclick="calculate('4')">4</p>
+</section>
+<section class="col-3">
+  <p id="chiffre5" onclick="calculate('5')">5</p>
+</section>
+<section class="col-3">
+  <p id="chiffre6" onclick="calculate('6')">6</p>
+</section>
+<section class="col-3">
+  <p id="moins" onclick="calculate('-')">-</p>
+</section>
+<section class="col-3">
+  <p id="chiffre7" onclick="calculate('7')">7</p>
+</section>
+<section class="col-3">
+  <p id="chiffre8" onclick="calculate('8')">8</p>
+</section>
+<section class="col-3">
+  <p id="chiffre9" onclick="calculate('9')">9</p>
+</section>
+<section class="col-3">
+  <p id="multipliez" onclick="calculate('x')">X</p>
+</section>
+<section class="col-3">
+  <p id="diviser" onclick="calculate('/')">/</p>
+</section>
+<section class="col-3">
+  <p id="egal" onclick="calculate('=')">=</p>
+</section>
+<section class="col-3">
+  <p id="reset" onclick="calculate('reset')">reset</p>
+</section>
+<section class="col-3">
+  <p id="cancel" onclick="calculate('C')">C</p>
+</section>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-        		<!-- Images Type  -->
-        <!-- <img src="http://placehold.it/350x150" alt=""> -->
-        	<!-- Fin Images Type  -->
 
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+    </main>
       <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')
