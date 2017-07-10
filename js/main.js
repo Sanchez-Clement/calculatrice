@@ -30,13 +30,22 @@ function calculate(chiffre) {
       final.push(total);
       total = "";
       final.push(chiffre);
-      console.log(final);
+
       document.getElementById("total").innerHTML = "";
-    } else {
+    } else if (final.length == 2) {
+      final.push(total);
+      total = "";
+
+
+    }
+
+
+    else  {
 
 
       total = "";
       final.push(chiffre);
+      console.log(chiffre);
       console.log(final);
       document.getElementById("total").innerHTML = "";
 
@@ -53,6 +62,7 @@ function calculate(chiffre) {
 
   if (final.length == 3) {
 
+
     if (final[1] == "-") {
       result = Number(final[0]) - Number(final[2]);
     } else if (final[1] == "x") {
@@ -67,9 +77,16 @@ function calculate(chiffre) {
     // console.log(result);
     document.getElementById("total").innerHTML = result;
     final = [result];
-    chiffre = "";
+    if (chiffre == "-" || chiffre == "+" || chiffre == "/" || chiffre == "x"){
+      
+      final.push(chiffre);
+      chiffre = "";
+    } else {
+        chiffre = "";
+    }
+
     total = "";
-    console.log(final);
+
 
   }
 
