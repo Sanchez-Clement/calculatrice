@@ -6,7 +6,11 @@ var result = 0;
 
 function calculate(chiffre) {
 
-  if (chiffre == "reset") {
+  if ( total == "" && chiffre =="-") {
+    total+= chiffre;
+    console.log(total);
+    document.getElementById("total").innerHTML = total;
+  } else if (chiffre == "reset") {
     total = "";
     final = [];
     chiffre = "";
