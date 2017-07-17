@@ -1,20 +1,61 @@
+@font-face {
+  font-family: "Digital";
+  src: url("../fonts/digital2.ttf");
+}
+
+
 #calculatrice {
   padding: 10px;
+  width: 250px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  margin: auto;
+  background-color: rgb(242,237,233);
+  border-radius: 20Px;
+  border: 3px solid rgb(128,181,35);
+
 }
 
 #affichage {
-  height: 50px;
-  border: 2px solid black;
-  background-color: yellow
+  width: 100%;
+
 
 }
 
-section {
-  background-color: green;
-  height: 30px;
+#affichage p
+
+ {
+   border: 2px solid black;
+   background-color: rgb(125,146,113);
+   font-family:  "Digital";
+   font-size: 20px;
+
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  color: black;
+
+
+
+}
+
+section  p{
+  background-color: rgb(128,181,35);
+  height: 50px;
+  width: 50px;
   border: 1px solid black;
+  margin: 2px;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
 
 }
 section p {
   text-align: center;
+  display: flex;
+
 }
