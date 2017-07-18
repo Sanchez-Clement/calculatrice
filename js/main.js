@@ -4,10 +4,11 @@ var final = [];
 var test = [];
 var result = 0;
 
+
 function calculate(chiffre) {
 
-  if ( total == "" && chiffre =="-") {
-    total+= chiffre;
+  if (total == "" && chiffre == "-") {
+    total += chiffre;
     console.log(total);
     document.getElementById("total").innerHTML = total;
   } else if (chiffre == "reset") {
@@ -60,20 +61,36 @@ function calculate(chiffre) {
   }
 
   if (final.length == 3) {
-console.log(final);
 
-    if (final[1] == "-") {
-      result = Number(final[0]) - Number(final[2]);
-    } else if (final[1] == "x") {
-      console.log(Number(final[0]));
-      console.log(Number(final[2]));
-      result = Number(final[0]) * Number(final[2]);
-    } else if (final[1] == "/") {
-      result = Number(final[0]) / Number(final[2]);
-    } else {
-      result = Number(final[0]) + Number(final[2]);
+    switch (final[1]) {
+      case "-": result = Number(final[0]) - Number(final[2]);
+
+        break;
+
+        case "x": result = Number(final[0]) * Number(final[2]);
+
+          break;
+
+          case "/": result = Number(final[0]) / Number(final[2]);
+
+            break;
+      default: result = Number(final[0]) + Number(final[2]);
+
     }
 
+    // if (final[1] == "-") {
+    //   result = Number(final[0]) - Number(final[2]);
+    // } else if (final[1] == "x") {
+    //
+    //   result = Number(final[0]) * Number(final[2]);
+    // } else if (final[1] == "/") {
+    //   result = Number(final[0]) / Number(final[2]);
+    // } else {
+    //   result = Number(final[0]) + Number(final[2]);
+    // }
+
+
+if (result.toString().length >7) { result = result.toPrecision(7);}
 
     document.getElementById("total").innerHTML = result;
     final = [result];

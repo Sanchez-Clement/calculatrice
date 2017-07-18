@@ -59,3 +59,10 @@ section p {
   display: flex;
 
 }
+
+img {
+  height: auto;
+  width: 70px;
+  position: relative;
+  right:30px;
+}
